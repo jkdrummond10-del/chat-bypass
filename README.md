@@ -1,2 +1,0 @@
-# chat-bypass
-idk
