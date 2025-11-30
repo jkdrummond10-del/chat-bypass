@@ -1,0 +1,1619 @@
+-- filename: 
+
+-- version: lua51
+
+-- line: [0, 0] id: 0
+
+local r0_0 = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+
+local r3_0 = {
+
+  Title = "XCB (3.1)",
+
+  Icon = "shield-off",
+
+  Author = "Made by @xyraregrets & @mask_real",
+
+  Folder = "xyrasbypasser",
+
+  Theme = "Dark",
+
+  Size = UDim2.fromOffset(500, 400),
+
+  MinSize = Vector2.new(480, 320),
+
+  MaxSize = Vector2.new(750, 500),
+
+}
+
+r3_0.KeySystem = {
+
+  Key = {
+
+    "MaskLikesCats"
+
+  },
+
+  Note = "Join The Discord For Key :3",
+
+  URL = "https.discord.gg/E7myjT34m7",
+
+  SaveKey = true,
+
+}
+
+local r1_0 = r0_0:CreateWindow(r3_0)
+
+r1_0:SetToggleKey(Enum.KeyCode.K)
+
+r3_0 = r1_0:Section({
+
+  Title = "Credits",
+
+  Icon = "users",
+
+  Opened = true,
+
+}):Tab({
+
+  Title = "Credits",
+
+  Icon = "award",
+
+})
+
+r3_0:Paragraph({
+
+  Title = "",
+
+  Desc = "@mask_lol",
+
+})
+
+r3_0:Paragraph({
+
+  Title = "",
+
+  Desc = "@xyraregrets",
+
+})
+
+r3_0:Paragraph({
+
+  Title = "",
+
+  Desc = "@feariosz0",
+
+})
+
+r3_0:Paragraph({
+
+  Title = "special thanks",
+
+  Desc = "this bypasser is perfected thanks to those people who wanted to provide the best chat experience.",
+
+})
+
+local r4_0 = {
+
+  "Auto ( tags evasion btw)",
+
+  "Method 1 (⭐)",
+
+  "Method 2 (⭐)",
+
+  "Method 3 (⭐)",
+
+  "Method 4 (⭐)",
+
+  "Method 5 (⭐)",
+
+  "Method 6 (⭐)"
+
+}
+
+local r5_0 = false
+
+local r6_0 = 0
+
+local r7_0 = false
+
+local r8_0 = ""
+
+local r9_0 = 1
+
+local r10_0 = false
+
+local r11_0 = nil
+
+local r12_0 = false
+
+local r13_0 = false
+
+local r14_0 = false
+
+local r15_0 = 16
+
+local r16_0 = false
+
+local r17_0 = false
+
+local r18_0 = false
+
+local r19_0 = nil
+
+local r20_0 = false
+
+local r21_0 = 50
+
+local r22_0 = "abcdefghijklmn¿"
+
+local r23_0 = "\u{1f}"
+
+local r24_0 = game:GetService("CoreGui")
+
+local r25_0 = game:GetService("Players")
+
+local r26_0 = game:GetService("ReplicatedStorage")
+
+local r27_0 = game:GetService("TextChatService")
+
+local r28_0 = game:GetService("TeleportService")
+
+local r29_0 = game:GetService("StarterGui")
+
+local r30_0 = game:GetService("UserInputService")
+
+local r31_0 = game:GetService("RunService")
+
+local r32_0 = game:GetService("Chat")
+
+local r33_0 = r25_0.LocalPlayer
+
+local r35_0 = (function()
+
+  -- line: [0, 0] id: 24
+
+  local r0_24 = r25_0.LocalPlayer:FindFirstChild("PlayerGui")
+
+  if not r0_24 then
+
+    return nil
+
+  end
+
+  local r1_24 = r24_0:FindFirstChild("ExperienceChat")
+
+  if r1_24 then
+
+    local r2_24 = r1_24:FindFirstChild("appLayout") and r1_24.appLayout:FindFirstChild("chatInputBar") and r1_24.appLayout.chatInputBar:FindFirstChild("Background") and r1_24.appLayout.chatInputBar.Background:FindFirstChild("Container") and r1_24.appLayout.chatInputBar.Background.Container:FindFirstChild("TextContainer") and r1_24.appLayout.chatInputBar.Background.Container.TextContainer:FindFirstChild("TextBoxContainer")
+
+    if r2_24 then
+
+      return r2_24:FindFirstChild("TextBox")
+
+    end
+
+  end
+
+  local r2_24 = r0_24:FindFirstChild("Chat")
+
+  if r2_24 and r2_24:FindFirstChild("Frame") and r2_24.Frame:FindFirstChild("ChatBar") then
+
+    return r2_24.Frame.ChatBar:FindFirstChild("TextBox")
+
+  end
+
+  return nil
+
+end)()
+
+local function r36_0(r0_36)
+
+  -- line: [0, 0] id: 36
+
+  pcall(function()
+
+    -- line: [0, 0] id: 37
+
+    r27_0.TextChannels.RBXGeneral:SendAsync(r0_36)
+
+  end)
+
+end
+
+local function r37_0(r0_9)
+
+  -- line: [0, 0] id: 9
+
+  local r1_9, r2_9 = pcall(function()
+
+    -- line: [0, 0] id: 10
+
+    return r32_0:FilterStringForBroadcast(r0_9, r33_0)
+
+  end)
+
+  if r1_9 then
+
+    return r2_9
+
+  end
+
+  return "###"
+
+end
+
+local function r38_0(r0_3, r1_3)
+
+  -- line: [0, 0] id: 3
+
+  if type(r1_3) ~= "number" then
+
+    r1_3 = 1
+
+  end
+
+  local r2_3 = "\u{1f}"
+
+  local r4_3 = ({
+
+    [1] = {
+
+      q = "q",
+
+      w = "w",
+
+      e = "e",
+
+      r = "��",
+
+      t = "t",
+
+      y = "y",
+
+      u = "��",
+
+      i = "��่",
+
+      o = "o",
+
+      p = "p",
+
+      a = "��",
+
+      s = "��",
+
+      d = "d",
+
+      f = "f",
+
+      g = "g",
+
+      h = "�า",
+
+      j = "�",
+
+      k = "�",
+
+      l = "l",
+
+      z = "z",
+
+      x = "x",
+
+      c = "c",
+
+      v = "v",
+
+      b = "b",
+
+      n = "��า",
+
+      m = "��า",
+
+      [" "] = r2_3,
+
+    },
+
+    [2] = {
+
+      q = "q",
+
+      w = "w",
+
+      e = "e",
+
+      r = "r",
+
+      t = "t",
+
+      y = "y",
+
+      u = "��",
+
+      i = "��่",
+
+      o = "o",
+
+      p = "p",
+
+      a = "��",
+
+      s = "��",
+
+      d = "d",
+
+      f = "f",
+
+      g = "g",
+
+      h = "�า",
+
+      j = "�",
+
+      k = "�",
+
+      l = "l",
+
+      z = "z",
+
+      x = "x",
+
+      c = "c",
+
+      v = "v",
+
+      b = "b",
+
+      n = "��า",
+
+      m = "��า",
+
+      [" "] = r2_3,
+
+    },
+
+    [3] = {
+
+      q = "q",
+
+      w = "w",
+
+      e = "e",
+
+      r = "�",
+
+      t = "t",
+
+      y = "y",
+
+      u = "��",
+
+      i = "��่",
+
+      o = "o",
+
+      p = "p",
+
+      a = "��",
+
+      s = "��",
+
+      d = "d",
+
+      f = "f",
+
+      g = "g",
+
+      h = "�า",
+
+      j = "�",
+
+      k = "�",
+
+      l = "l",
+
+      z = "z",
+
+      x = "x",
+
+      c = "c",
+
+      v = "v",
+
+      b = "b",
+
+      n = "��า",
+
+      m = "��า",
+
+      [" "] = r2_3,
+
+    },
+
+    [4] = {
+
+      q = "q",
+
+      w = "w",
+
+      e = "e",
+
+      r = "��",
+
+      t = "t",
+
+      y = "y",
+
+      u = "��",
+
+      i = "��่",
+
+      o = "o",
+
+      p = "p",
+
+      a = "��",
+
+      s = "��",
+
+      d = "��",
+
+      f = "f",
+
+      g = "g",
+
+      h = "�า",
+
+      j = "�",
+
+      k = "�",
+
+      l = "l",
+
+      z = "z",
+
+      x = "x",
+
+      c = "c",
+
+      v = "v",
+
+      b = "b",
+
+      n = "��า",
+
+      m = "��า",
+
+      [" "] = r2_3,
+
+    },
+
+    [5] = {
+
+      q = "q",
+
+      w = "w",
+
+      e = "e",
+
+      r = "r",
+
+      t = "t",
+
+      y = "y",
+
+      u = "��",
+
+      i = "��่",
+
+      o = "o",
+
+      p = "p",
+
+      a = "��",
+
+      s = "��",
+
+      d = "��",
+
+      f = "f",
+
+      g = "g",
+
+      h = "�า",
+
+      j = "�",
+
+      k = "�",
+
+      l = "l",
+
+      z = "z",
+
+      x = "x",
+
+      c = "c",
+
+      v = "v",
+
+      b = "b",
+
+      n = "��า",
+
+      m = "��า",
+
+      [" "] = r2_3,
+
+    },
+
+    [6] = {
+
+      q = "q",
+
+      w = "w",
+
+      e = "e",
+
+      r = "�",
+
+      t = "t",
+
+      y = "y",
+
+      u = "��",
+
+      i = "��่",
+
+      o = "o",
+
+      p = "p",
+
+      a = "��",
+
+      s = "��",
+
+      d = "��",
+
+      f = "f",
+
+      g = "g",
+
+      h = "�า",
+
+      j = "�",
+
+      k = "�",
+
+      l = "l",
+
+      z = "z",
+
+      x = "x",
+
+      c = "c",
+
+      v = "v",
+
+      b = "b",
+
+      n = "��า",
+
+      m = "��า",
+
+      [" "] = r2_3,
+
+    },
+
+  })[r1_3]
+
+  local r6_3 = (function(r0_4)
+
+    -- line: [0, 0] id: 4
+
+    local r1_4 = ""
+
+    for r5_4 = 1, #r0_4, 1 do
+
+      local r6_4 = r0_4:sub(r5_4, r5_4)
+
+      r1_4 = r1_4 .. (r4_3[r6_4] or r6_4)
+
+    end
+
+    return r1_4
+
+  end)(r0_3)
+
+  if 1 <= r1_3 and r1_3 <= 6 then
+
+    return "{º\u{1f}" .. r6_3 .. "\u{1f}º}"
+
+  end
+
+  return r6_3
+
+end
+
+local function r39_0()
+
+  -- line: [0, 0] id: 18
+
+  local r0_18 = ""
+
+  for r4_18 = 1, 20, 1 do
+
+    local r5_18 = math.random(1, #r22_0)
+
+    r0_18 = r0_18 .. r22_0:sub(r5_18, r5_18)
+
+  end
+
+  r36_0(r0_18 .. string.rep(r23_0, math.random(1, 5)))
+
+end
+
+local function r40_0()
+
+  -- line: [0, 0] id: 7
+
+  return r33_0.Character and r33_0.Character:FindFirstChildOfClass("Humanoid")
+
+end
+
+local function r41_0()
+
+  -- line: [0, 0] id: 11
+
+  r28_0:Teleport(game.PlaceId, r33_0)
+
+end
+
+local function r42_0()
+
+  -- line: [0, 0] id: 38
+
+  r28_0:TeleportToPlaceInstance(game.PlaceId, game.JobId, r33_0)
+
+end
+
+local function r43_0()
+
+  -- line: [0, 0] id: 13
+
+  r13_0 = true
+
+  local r0_13 = {
+
+    "Admin",
+
+    "Head Admin",
+
+    "Moderator",
+
+    "Developer",
+
+    "Owner",
+
+    "Staff"
+
+  }
+
+  while r12_0 do
+
+    local r1_13 = ipairs
+
+    local r2_13 = r25_0
+
+    for r4_13, r5_13 in r1_13(r2_13:GetPlayers()) do
+
+      local r6_13 = r33_0
+
+      if r5_13 ~= r6_13 then
+
+        r6_13 = r5_13.DisplayName or r5_13.Name
+
+        for r10_13, r11_13 in ipairs(r0_13) do
+
+          if string.find(r6_13, r11_13, 1, true) or string.find(r5_13.Name, r11_13, 1, true) then
+
+            r41_0()
+
+            return 
+
+          end
+
+        end
+
+      end
+
+    end
+
+    task.wait(2)
+
+  end
+
+  r13_0 = false
+
+end
+
+local function r44_0(r0_1)
+
+  -- line: [0, 0] id: 1
+
+  r17_0 = r0_1
+
+  if not r33_0.Character then
+
+    return 
+
+  end
+
+  for r4_1, r5_1 in ipairs(r33_0.Character:GetChildren()) do
+
+    if r5_1:IsA("BasePart") then
+
+      pcall(function()
+
+        -- line: [0, 0] id: 2
+
+        r5_1.CanCollide = not r0_1
+
+      end)
+
+    end
+
+    -- close: r4_1
+
+  end
+
+end
+
+local function r45_0()
+
+  -- line: [0, 0] id: 15
+
+  r16_0 = true
+
+  while r14_0 do
+
+    local r0_15 = r40_0()
+
+    if r0_15 then
+
+      r0_15.WalkSpeed = r15_0
+
+    end
+
+    task.wait(0.1)
+
+  end
+
+  local r0_15 = r40_0()
+
+  if r0_15 then
+
+    r0_15.WalkSpeed = 16
+
+  end
+
+  r16_0 = false
+
+end
+
+local function r46_0(r0_33)
+
+  -- line: [0, 0] id: 33
+
+  local r1_33 = r40_0()
+
+  if r1_33 then
+
+    r1_33.JumpPower = r0_33
+
+  end
+
+end
+
+local function r47_0()
+
+  -- line: [0, 0] id: 29
+
+  local r0_29 = r33_0.Character and r33_0.Character:FindFirstChild("HumanoidRootPart")
+
+  if not r0_29 then
+
+    return 
+
+  end
+
+  if r19_0 and r19_0.Parent then
+
+    r19_0:Destroy()
+
+  end
+
+  r19_0 = Instance.new("Part", workspace)
+
+  local r9_29 = Vector3.new(2, 6, 2)
+
+  local r13_29 = Color3.fromRGB(255, 0, 255)
+
+  r19_0.Transparency = 0.5
+
+  r19_0.Color = r13_29
+
+  r19_0.Anchored = true
+
+  r19_0.CanCollide = false
+
+  r19_0.CFrame = r0_29.CFrame
+
+  r19_0.Size = r9_29
+
+  r19_0.Name = "LocalCloneMarker"
+
+end
+
+local function r48_0()
+
+  -- line: [0, 0] id: 34
+
+  local r0_34 = r33_0.Character and r33_0.Character:FindFirstChild("HumanoidRootPart")
+
+  if not r0_34 or not r19_0 or not r19_0.Parent then
+
+    return 
+
+  end
+
+  r0_34.CFrame = r19_0.CFrame + Vector3.new(0, 5, 0)
+
+end
+
+local r49_0 = r1_0:Section({
+
+  Title = "Chat Bypass",
+
+  Icon = "lucide:message-circle",
+
+  Opened = true,
+
+})
+
+local r50_0 = r49_0:Tab({
+
+  Title = "Bypass",
+
+  Icon = "lucide:message-circle-code",
+
+})
+
+r50_0:Paragraph({
+
+  Title = "WARNING",
+
+  Desc = "Change roblox language to shqipe for best experience",
+
+  Color = "Orange",
+
+})
+
+r50_0:Dropdown({
+
+  Title = "Method",
+
+  Desc = "Select the bypass method",
+
+  Values = r4_0,
+
+  Callback = function(r0_8)
+
+    -- line: [0, 0] id: 8
+
+    if r0_8 == "Auto ( tags evasion btw)" then
+
+      r6_0 = 0
+
+      return 
+
+    end
+
+    local r1_8 = r0_8:match("Method (%d+)")
+
+    if r1_8 then
+
+      r6_0 = tonumber(r1_8)
+
+    end
+
+  end,
+
+}):Select("Auto ( tags evasion btw)")
+
+r50_0:Toggle({
+
+  Title = "Auto Bypass",
+
+  Desc = "Automatically bypasses your message after typing.",
+
+  Value = false,
+
+  Callback = function(r0_20)
+
+    -- line: [0, 0] id: 20
+
+    r5_0 = r0_20
+
+    local r1_20 = r0_0
+
+    local r3_20 = {
+
+      Title = "XCB",
+
+    }
+
+    local r4_20 = "Auto Bypass "
+
+    local r5_20 = nil	-- notice: implicit variable refs by block#[3]
+
+    if r0_20 then
+
+      r5_20 = "Enabled"
+
+      if not r5_20 then
+
+        ::label_11::
+
+        r5_20 = "Disabled"
+
+      end
+
+    else
+
+      goto label_11	-- block#2 is visited secondly
+
+    end
+
+    r3_20.Content = r4_20 .. r5_20
+
+    r3_20.Duration = 3
+
+    r3_20.Icon = "shield-off"
+
+    r1_20:Notify(r3_20)
+
+  end,
+
+})
+
+r50_0:Toggle({
+
+  Title = "Auto Reset Filter",
+
+  Desc = "attempt to reset the filter so.",
+
+  Value = false,
+
+  Callback = function(r0_21)
+
+    -- line: [0, 0] id: 21
+
+    r7_0 = r0_21
+
+    local r1_21 = r0_0
+
+    local r3_21 = {
+
+      Title = "XCB",
+
+    }
+
+    local r4_21 = "Auto Reset Filter "
+
+    local r5_21 = nil	-- notice: implicit variable refs by block#[3]
+
+    if r0_21 then
+
+      r5_21 = "Enabled"
+
+      if not r5_21 then
+
+        ::label_11::
+
+        r5_21 = "Disabled"
+
+      end
+
+    else
+
+      goto label_11	-- block#2 is visited secondly
+
+    end
+
+    r3_21.Content = r4_21 .. r5_21
+
+    r3_21.Duration = 3
+
+    r3_21.Icon = "shield-off"
+
+    r1_21:Notify(r3_21)
+
+  end,
+
+})
+
+if r35_0 then
+
+  r35_0.FocusLost:Connect(function(r0_35)
+
+    -- line: [0, 0] id: 35
+
+    if r0_35 and r5_0 and r35_0.Text ~= "" then
+
+      local r1_35 = r35_0.Text
+
+      r35_0.Text = ""
+
+      local r2_35 = false
+
+      if r6_0 == 0 then
+
+        for r7_35, r8_35 in ipairs({
+
+          2,
+
+          1,
+
+          3,
+
+          5,
+
+          4,
+
+          6
+
+        }) do
+
+          local r9_35 = r38_0(r1_35, r8_35)
+
+          if r37_0(r9_35) == r9_35 then
+
+            r36_0(r9_35)
+
+            r2_35 = true
+
+          end
+
+        end
+
+      else
+
+        local r3_35 = r38_0(r1_35, r6_0)
+
+        if r37_0(r3_35) == r3_35 then
+
+          r36_0(r3_35)
+
+          r2_35 = true
+
+        end
+
+      end
+
+      if not r2_35 then
+
+        r0_0:Notify({
+
+          Title = "XCB",
+
+          Content = "Message was tagged. Try rephrasing.",
+
+          Duration = 4,
+
+          Icon = "shield-alert",
+
+        })
+
+        if r7_0 then
+
+          r39_0()
+
+        end
+
+      end
+
+    end
+
+  end)
+
+end
+
+local r52_0 = r49_0:Tab({
+
+  Title = "Chat Spammer",
+
+  Icon = "volume-2",
+
+})
+
+r52_0:Paragraph({
+
+  Title = "WARNING",
+
+  Desc = "If interval is to low, you may get a ban/warning.",
+
+  Color = "Orange",
+
+})
+
+r52_0:Input({
+
+  Title = "Message",
+
+  Desc = "Message to spam",
+
+  Placeholder = "Enter Message",
+
+  Callback = function(r0_23)
+
+    -- line: [0, 0] id: 23
+
+    r8_0 = r0_23
+
+  end,
+
+})
+
+r52_0:Slider({
+
+  Title = "Interval",
+
+  Desc = "Spam interval (seconds)",
+
+  Step = 0.1,
+
+  Value = {
+
+    Min = 0.1,
+
+    Max = 10,
+
+    Default = 1,
+
+  },
+
+  Callback = function(r0_17)
+
+    -- line: [0, 0] id: 17
+
+    r9_0 = r0_17
+
+  end,
+
+})
+
+r52_0:Toggle({
+
+  Title = "Spam",
+
+  Desc = "Enable/Disable chat spam",
+
+  Value = false,
+
+  Callback = function(r0_31)
+
+    -- line: [0, 0] id: 31
+
+    if r8_0 == "" then
+
+      return 
+
+    end
+
+    r10_0 = r0_31
+
+    if r0_31 and not r11_0 then
+
+      r11_0 = task.spawn(function()
+
+        -- line: [0, 0] id: 32
+
+        while r10_0 do
+
+          r36_0(r8_0)
+
+          task.wait(r9_0)
+
+        end
+
+        r11_0 = nil
+
+      end)
+
+    end
+
+  end,
+
+})
+
+local r53_0 = r1_0:Section({
+
+  Title = "Exploits",
+
+  Icon = "wand",
+
+  Opened = false,
+
+})
+
+local r54_0 = r53_0:Tab({
+
+  Title = "Protection",
+
+  Icon = "shield-half",
+
+})
+
+r54_0:Toggle({
+
+  Title = "Anti High Rank",
+
+  Desc = "Detects staff/admins and server hops.",
+
+  Value = false,
+
+  Callback = function(r0_27)
+
+    -- line: [0, 0] id: 27
+
+    r12_0 = r0_27
+
+    if r0_27 and not r13_0 then
+
+      task.spawn(r43_0)
+
+    end
+
+  end,
+
+})
+
+r54_0:Toggle({
+
+  Title = "Anti Reset",
+
+  Desc = "Attempts to prevent you from respawning.",
+
+  Value = false,
+
+  Callback = function(r0_5)
+
+    -- line: [0, 0] id: 5
+
+    r18_0 = r0_5
+
+  end,
+
+})
+
+r54_0:Button({
+
+  Title = "Server Hop",
+
+  Desc = "Teleports you to a new server.",
+
+  Callback = r41_0,
+
+})
+
+r54_0:Button({
+
+  Title = "Rejoin Server",
+
+  Desc = "Teleports you back to the current server.",
+
+  Callback = r42_0,
+
+})
+
+local r55_0 = r53_0:Tab({
+
+  Title = "Movement",
+
+  Icon = "footprints",
+
+})
+
+r55_0:Paragraph({
+
+  Title = "WARNING",
+
+  Desc = "These may be detected/patched.",
+
+  Color = "Orange",
+
+})
+
+r55_0:Slider({
+
+  Title = "WalkSpeed",
+
+  Desc = " studs/sec",
+
+  Step = 1,
+
+  Value = {
+
+    Min = 16,
+
+    Max = 300,
+
+    Default = 16,
+
+  },
+
+  Callback = function(r0_14)
+
+    -- line: [0, 0] id: 14
+
+    r15_0 = r0_14
+
+  end,
+
+})
+
+r55_0:Toggle({
+
+  Title = "WalkSpeed Toggle",
+
+  Desc = "Enable/Disable custom walkspeed.",
+
+  Value = false,
+
+  Callback = function(r0_28)
+
+    -- line: [0, 0] id: 28
+
+    r14_0 = r0_28
+
+    if r0_28 and not r16_0 then
+
+      task.spawn(r45_0)
+
+    end
+
+  end,
+
+})
+
+r55_0:Slider({
+
+  Title = "JumpPower Value",
+
+  Desc = " studs",
+
+  Step = 1,
+
+  Value = {
+
+    Min = 50,
+
+    Max = 250,
+
+    Default = 50,
+
+  },
+
+  Callback = function(r0_6)
+
+    -- line: [0, 0] id: 6
+
+    r21_0 = r0_6
+
+    r46_0(r0_6)
+
+  end,
+
+})
+
+r55_0:Toggle({
+
+  Title = "JumpPower Toggle",
+
+  Desc = "Enable/Disable custom jumppower.",
+
+  Value = false,
+
+  Callback = function(r0_30)
+
+    -- line: [0, 0] id: 30
+
+    local r1_30 = r40_0()
+
+    if r1_30 then
+
+      local r2_30 = nil	-- notice: implicit variable refs by block#[4]
+
+      if r0_30 then
+
+        r2_30 = r21_0
+
+        if not r2_30 then
+
+          ::label_9::
+
+          r2_30 = 50
+
+        end
+
+      else
+
+        goto label_9	-- block#3 is visited secondly
+
+      end
+
+      r1_30.JumpPower = r2_30
+
+    end
+
+  end,
+
+})
+
+r55_0:Toggle({
+
+  Title = "Noclip",
+
+  Desc = "Allows you to walk through walls.",
+
+  Value = false,
+
+  Callback = function(r0_16)
+
+    -- line: [0, 0] id: 16
+
+    r44_0(r0_16)
+
+  end,
+
+})
+
+local r56_0 = r53_0:Tab({
+
+  Title = "Utility",
+
+  Icon = "tool",
+
+})
+
+r56_0:Paragraph({
+
+  Title = "Location Teleport",
+
+  Desc = "Save and teleport to specific map coordinates.",
+
+})
+
+r56_0:Button({
+
+  Title = "Create Location Marker",
+
+  Desc = "Saves your current position.",
+
+  Callback = r47_0,
+
+})
+
+r56_0:Button({
+
+  Title = "Teleport to Location Marker",
+
+  Desc = "Teleports you to your saved position.",
+
+  Callback = r48_0,
+
+})
+
+local r58_0 = r1_0:Section({
+
+  Title = "Scripts",
+
+  Icon = "terminal",
+
+  Opened = false,
+
+}):Tab({
+
+  Title = "Extra Scripts",
+
+  Icon = "tool",
+
+})
+
+r58_0:Button({
+
+  Title = "xyra\'s Admin",
+
+  Callback = function()
+
+    -- line: [0, 0] id: 19
+
+    loadstring(game:HttpGet("https://xyra.lovable.app/XyraAdmin.lua"))()
+
+  end,
+
+})
+
+r58_0:Button({
+
+  Title = "FE animation gui",
+
+  Callback = function()
+
+    -- line: [0, 0] id: 26
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/YiSqWZ78"))()
+
+  end,
+
+})
+
+r58_0:Button({
+
+  Title = "twerk tool",
+
+  Callback = function()
+
+    -- line: [0, 0] id: 22
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/46yzqpCs"))()
+
+  end,
+
+})
+
+r58_0:Button({
+
+  Title = "infinite yield",
+
+  Callback = function()
+
+    -- line: [0, 0] id: 12
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+
+  end,
+
+})
+
+r1_0:Section({
+
+  Title = "settings",
+
+  Icon = "cog",
+
+  Opened = false,
+
+}):Tab({
+
+  Title = "general",
+
+  Icon = "settings",
+
+}):Button({
+
+  Title = "destroy UI",
+
+  Desc = "closes and removes the UI",
+
+  Callback = function()
+
+    -- line: [0, 0] id: 25
+
+    r1_0:Destroy()
+
+  end,
+
+})
